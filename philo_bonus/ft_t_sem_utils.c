@@ -9,7 +9,10 @@ void	ft_destroy_t_sem(t_sem *sem)
 		sem_close(sem->take);
 		sem_close(sem->forks);
 		if (sem->full)
+		{
+			sem_post(sem->full);
 			sem_close(sem->full);
+		}
 		free(sem);
 	}
 }

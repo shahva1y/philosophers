@@ -10,6 +10,7 @@ static int	ft_child_process(t_philo *philo)
 		sem_post((philo->sem)->finish);
 		exit(-1);
 	}
+	pthread_detach(check_thread);
 	ft_philosopher(philo);
 	return (0);
 }

@@ -23,8 +23,11 @@ int	ft_simulation(t_philo	*table)
 			return (-1);
 		sem_wait((table->sem)->finish);
 		if ((table->args)->must_eat_count != -1)
+		{
 			if (pthread_create(&check_thread, NULL, ft_check_eat_limits, table))
 				return (-1);
+			pthread_detach(check_thread);
+		}
 		ft_init_philo_processes(table, &pid_philo);
 		sem_wait((table->sem)->finish);
 		ft_kill_child_processes(pid_philo);

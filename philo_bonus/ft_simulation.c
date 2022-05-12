@@ -37,7 +37,10 @@ int	ft_simulation(t_philo	*table)
 		if ((table->args)->must_eat_count != -1)
 		{
 			if (pthread_create(&check_thread, NULL, ft_check_eat_limits, table))
+			{
+				ft_free(pid_philo);
 				return (-1);
+			}
 			pthread_detach(check_thread);
 		}
 		ft_init_philo_processes(table, &pid_philo);

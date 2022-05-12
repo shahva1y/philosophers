@@ -18,6 +18,7 @@ static int	ft_child_process(t_philo *philo)
 
 	if (pthread_create(&check_thread, NULL, ft_check_time_limits, philo))
 	{
+		sem_wait((philo->sem)->print);
 		write(2, "pthread_create error\n", 21);
 		sem_post((philo->sem)->finish);
 		exit(-1);
@@ -57,6 +58,7 @@ int	ft_init_philo_processes(t_philo *table, pid_t **pid_philo)
 			ft_child_process(philo);
 		if ((*pid_philo)[i] == -1)
 		{
+			sem_wait((philo->sem)->print);
 			sem_post((table->sem)->finish);
 			return (-1);
 		}

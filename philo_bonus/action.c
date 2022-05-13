@@ -51,7 +51,9 @@ void	ft_think(t_philo *philo)
 
 void	ft_eat(t_philo	*philo)
 {
+	sem_wait((philo->sem)->check);
 	philo->time = ft_get_time(0);
+	sem_post((philo->sem)->check);
 	sem_wait((philo->sem)->print);
 	printf("%llu %d is eating\n", ft_get_time(philo->init_time), philo->index);
 	sem_post((philo->sem)->print);

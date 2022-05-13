@@ -7,8 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="911d5547-63f8-4b7a-852a-47677897151b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/philo_bonus/ft_process_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/philo_bonus/ft_process_utils.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/philo_bonus/action.c" beforeDir="false" afterPath="$PROJECT_DIR$/philo_bonus/action.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/philo_bonus/check.c" beforeDir="false" afterPath="$PROJECT_DIR$/philo_bonus/check.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/philo_bonus/ft_simulation.c" beforeDir="false" afterPath="$PROJECT_DIR$/philo_bonus/ft_simulation.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/philo_bonus/ft_t_sem_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/philo_bonus/ft_t_sem_utils.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/philo_bonus/philo_bonus.h" beforeDir="false" afterPath="$PROJECT_DIR$/philo_bonus/philo_bonus.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +25,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2948IHpleLs5kCUGDcdlLEgxuhb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
@@ -51,6 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652360917009</updated>
       <workItem from="1652360919049" duration="1174000" />
+      <workItem from="1652397748210" duration="5801000" />
     </task>
     <servers />
   </component>

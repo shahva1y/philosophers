@@ -44,6 +44,7 @@ typedef struct s_sem
 	sem_t		*forks;
 	sem_t		*take;
 	sem_t		*print;
+	sem_t		*check;
 }		t_sem;
 
 typedef struct s_philo

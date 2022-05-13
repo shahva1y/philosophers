@@ -25,6 +25,7 @@ void	ft_destroy_t_sem(t_sem *sem)
 			sem_post(sem->full);
 			sem_close(sem->full);
 		}
+		sem_close(sem->check);
 		free(sem);
 	}
 }
@@ -36,6 +37,7 @@ void	ft_unlink_t_sem(void)
 	sem_unlink("/print");
 	sem_unlink("/full");
 	sem_unlink("/finish");
+	sem_unlink("/check");
 }
 
 t_sem	*ft_open_t_sem(t_sem *sem, t_args *args)
@@ -54,6 +56,7 @@ t_sem	*ft_open_t_sem(t_sem *sem, t_args *args)
 			ft_lock_sem_t(sem->full, args->number_of_philosophers);
 		}
 		sem->finish = sem_open("/finish", O_CREAT, 0666, 1);
+		sem->check = sem_open("/check", O_CREAT, 0666, 1);
 	}
 	return (sem);
 }

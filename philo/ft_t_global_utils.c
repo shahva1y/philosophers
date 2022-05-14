@@ -28,6 +28,12 @@ t_global	*ft_init_t_global(t_args *args)
 				free(global);
 				return (NULL);
 			}
+			if (pthread_mutex_init(&(global->mut_check), NULL))
+			{
+				pthread_mutex_destroy(&(global->mut_print));
+				free(global);
+				return (NULL);
+			}
 			global->args = args;
 		}
 	}
@@ -39,6 +45,7 @@ void	ft_destroy_t_global(t_global *global)
 	if (global)
 	{
 		pthread_mutex_destroy(&(global->mut_print));
+		pthread_mutex_destroy(&(global->mut_check));
 		free(global);
 	}
 }

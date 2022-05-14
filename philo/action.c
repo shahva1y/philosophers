@@ -60,7 +60,9 @@ void	ft_think(t_philo *philo)
 
 void	ft_eat(t_philo	*philo)
 {
+	pthread_mutex_lock(&((philo->global)->mut_check));
 	philo->time = ft_get_time(0);
+	pthread_mutex_unlock(&((philo->global)->mut_check));
 	pthread_mutex_lock(&((philo->global)->mut_print));
 	if ((philo->global)->status != END)
 		printf("%llu %d is eating\n",

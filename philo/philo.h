@@ -38,6 +38,7 @@ typedef struct s_global
 {
 	t_status		status;
 	t_args			*args;
+	pthread_mutex_t	mut_check;
 	pthread_mutex_t	mut_print;
 }		t_global;
 

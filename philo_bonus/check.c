@@ -36,8 +36,6 @@ void	*ft_check_time_limits(void *param)
 	philo = (t_philo *)param;
 	if (philo)
 	{
-		//unsigned long long time = 0;
-		//unsigned long long philo_time = 0;
 		sem_wait((philo->sem)->check);
 		while (delta <= (philo->args)->time_to_die)
 		{
@@ -46,9 +44,6 @@ void	*ft_check_time_limits(void *param)
 			usleep(1000);
 			sem_wait((philo->sem)->check);
 		}
-		printf("%llu\n", delta);
-		//printf("%llu\n", time);
-		//printf("%llu\n", philo_time);
 		sem_wait((philo->sem)->print);
 		printf("%llu %d died\n", ft_get_time(philo->init_time), philo->index);
 		sem_post((philo->sem)->finish);

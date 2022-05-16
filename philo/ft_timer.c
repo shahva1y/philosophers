@@ -17,8 +17,8 @@ int	ft_timer(unsigned long long ms)
 	t_time	init_time;
 
 	init_time = ft_get_time(0);
-	while (ft_get_time(init_time) <= ms)
-		usleep(1000);
+	while (ft_get_time(init_time) < ms)
+		usleep(10);
 	return (0);
 }
 

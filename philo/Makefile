@@ -25,7 +25,7 @@ CFLAGS = -Wall -Wextra -Werror -I$(HEADER)
 all		: $(NAME)
 
 $(NAME)	: $(OBJS)
-	$(CC) -fsanitize=thread $(OBJS) -o $(NAME)
+	$(CC) $(OBJS) -o $(NAME)
 
 %.o		: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@

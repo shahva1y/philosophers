@@ -45,7 +45,6 @@ int	ft_simulation(t_philo	*table)
 		}
 		ft_init_philo_processes(table, &pid_philo);
 		sem_wait((table->sem)->finish);
-		write(1, "Whats happen! This message i dont see!\n", 39);
 		ft_kill_child_processes(pid_philo);
 		ft_free(pid_philo);
 	}

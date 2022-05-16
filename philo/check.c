@@ -57,6 +57,7 @@ void	*ft_check_time_limits(void *param)
 			table = table->next;
 			pthread_mutex_lock(&((table->global)->mut_check));
 		}
+		pthread_mutex_unlock(&((table->global)->mut_check));
 		if ((table->global)->status == END)
 			return (NULL);
 		pthread_mutex_lock(&((table->global)->mut_print));
@@ -64,7 +65,6 @@ void	*ft_check_time_limits(void *param)
 		printf("%llu %d died\n", ft_get_time(table->init_time), table->index);
 		ft_unlock_t_philo_list(table);
 		pthread_mutex_unlock(&((table->global)->mut_print));
-		pthread_mutex_unlock(&((table->global)->mut_check));
 	}
 	return (NULL);
 }
